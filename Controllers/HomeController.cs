@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MVC_Lab.Models;
+using GasMileageApplication.Models;
 
 namespace MVC_Lab.Controllers
 {
@@ -21,19 +22,6 @@ namespace MVC_Lab.Controllers
         public IActionResult Index()
         {
             return View();
-        }
-
-        [HttpGet]
-        public IActionResult MileageForm()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult MileageForm(Tripometer tripometer)
-        {
-            Tripometer newTripometer = new Tripometer(tripometer.MPG, tripometer.Gallons);
-            return View("MileageForm", newTripometer);
         }
 
         public IActionResult Privacy()

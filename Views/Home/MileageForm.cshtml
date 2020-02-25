@@ -3,10 +3,6 @@
     ViewData["Title"] = "MileageForm";
 }
 
-
-
-@model Tripometer
-
 <h1>Mileage Form</h1>
 
 <form action="../Home/MileageForm" method="post">
@@ -16,8 +12,7 @@
     <input type="number" name="Gallons" /><br />
     <label>Trip Distance:</label><br />
     <input type="number" name="Distance" /><br /><br />
-    <input type="submit" value="Calculate Range" />
+    <input type="submit" value="Calculate Trip" />
 </form>
 
-<p>Range: @Model.Range </p>
 <a href="../Home/Index">Link to Home Page</a>
